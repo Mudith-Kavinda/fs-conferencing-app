@@ -11,11 +11,11 @@ import Alert from './Alert';
 import { Button } from './ui/button';
 
 const MeetingSetup = ({
-  setIsSetupComplete,
+setIsSetupComplete
 }: {
   setIsSetupComplete: (value: boolean) => void;
 }) => {
-  // https://getstream.io/video/docs/react/guides/call-and-participant-state/#call-state
+
   const { useCallEndedAt, useCallStartsAt } = useCallStateHooks();
   const callStartsAt = useCallStartsAt();
   const callEndedAt = useCallEndedAt();
@@ -31,7 +31,7 @@ const MeetingSetup = ({
     );
   }
 
-  // https://getstream.io/video/docs/react/ui-cookbook/replacing-call-controls/
+
   const [isMicCamToggled, setIsMicCamToggled] = useState(false);
 
   useEffect(() => {
